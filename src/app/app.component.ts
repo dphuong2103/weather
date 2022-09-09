@@ -26,9 +26,9 @@ export class AppComponent {
 
   setBackground() {
     if (this.temperature! <= 25) {
-      this.backgroundURL = 'url(../assets/imgs/cold.jpg)';
+      this.backgroundURL = 'url(assets/imgs/cold.jpg)';
     } else {
-      this.backgroundURL = 'url(../assets/imgs/sunny.jpg)';
+      this.backgroundURL = 'url(assets/imgs/sunny.jpg)';
     }
   }
 
