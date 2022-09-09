@@ -1,0 +1,71 @@
+<div class="background">
+  <div class="search">
+    <form (submit)="handSearchSubmit()">
+      <input [(ngModel)]="searchInput" ngMode name="searchInput" placeholder="City..."/>
+    </form>
+  </div>
+  <div class="container">
+    <div class="upper-container" [style.background-image]="backgroundURL">
+      <!-- <img src="../assets/imgs/cold.jpg" /> -->
+      <div class="weather-data">
+        <div class="location">{{ location }}</div>
+        <div class="temperature">{{ temperature }}°C</div>
+      </div>
+    </div>
+
+    <div class="lower-container">
+      <div class="title">More information</div>
+      <div class="content-container">
+        <div class="content">
+          <!-- min -->
+          <div class="item-container min">
+            <div class="item-info">
+              <img src="../assets/imgs/min.png" alt="" />
+              <div class="item-name">Min</div>
+            </div>
+
+            <div class="item-data">
+              <span>{{ minTemperature }}°C</span>
+            </div>
+          </div>
+
+          <!-- max -->
+          <div class="item-container max">
+            <div class="item-info">
+              <img src="../assets/imgs/max.png" alt="" />
+              <div class="item-name">Max</div>
+            </div>
+
+            <div class="item-data">
+              <span>{{ maxTemperature }}°C</span>
+            </div>
+          </div>
+
+          <!-- humidity -->
+          <div class="item-container humidity">
+            <div class="item-info">
+              <img src="../assets/imgs/humidity.png" alt="" />
+              <div class="item-name">Humidity</div>
+            </div>
+
+            <div class="item-data">
+              <span>{{ humidity }}%</span>
+            </div>
+          </div>
+
+          <!-- wind -->
+          <div class="item-container wind">
+            <div class="item-info">
+              <img src="../assets/imgs/wind.png" alt="" />
+              <div class="item-name">Wind</div>
+            </div>
+
+            <div class="item-data">
+              <span>{{ wind }} km/h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
